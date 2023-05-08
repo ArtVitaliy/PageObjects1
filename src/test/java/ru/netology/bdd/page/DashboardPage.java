@@ -25,11 +25,6 @@ public class DashboardPage {
         return extractBalance(text);
     }
 
-//    public int getFirstCardBalance() {
-//        val text = cards.first().text();
-//        return extractBalance(text);
-//    }
-
     public TransferPage selectCardToTransfer(DataHelper.CardInfo cardInfo) {
         cards.findBy(attribute("data-test-id", cardInfo.getTestId())).$("button").click();
         return new TransferPage();
